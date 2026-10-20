@@ -1,0 +1,15 @@
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, other):
+        if (self.a < other.a):
+            return "ob1 is less than ob2"
+        def __rq__(self, other):
+            if (self.a == other.a):
+                return "Both are equal"
+            else:
+                return "Not equal"
+ob1 = A(2)
+ob2 = A(3)
+print("Passed values:", ob1.a, ob2.a)
+print(ob1 < ob2)
